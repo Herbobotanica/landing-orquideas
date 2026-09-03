@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Laboratorio de Orquídeas — Herbo & Flor es Ser</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+:root{--nude:#eee5d8;--cream:#f7f3eb;--sage:#b7c1a9;--green:#314638;--ink:#26352c;--line:#c8cbbd;--white:#fffdf8;}
+*{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--ink);font-family:Quicksand,Arial,sans-serif;line-height:1.55}
+a{color:inherit} .wrap{max-width:1160px;margin:auto;padding:0 28px}
+.hero{min-height:720px;display:grid;grid-template-columns:1.02fr .98fr;background:var(--nude)}
+.hero-copy{padding:82px 7vw 70px;display:flex;flex-direction:column;justify-content:center}
+.kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:700;color:var(--green);margin-bottom:24px}
+h1{font-size:clamp(48px,7vw,88px);line-height:.95;margin:0 0 24px;font-weight:600;letter-spacing:-.045em}
+.italic{font-style:italic;font-weight:500}
+.lead{font-size:20px;max-width:570px}
+.meta{margin:26px 0;font-size:14px;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fff;padding:15px 23px;border-radius:999px;text-decoration:none;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;width:max-content}
+.hero-photo{position:relative;min-height:720px;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.orchid-float{position:absolute;right:24px;bottom:24px;width:180px;height:220px;border-radius:100px 100px 12px 12px;overflow:hidden;border:7px solid rgba(247,243,235,.85);box-shadow:0 12px 35px #0002}
+.orchid-float img{object-fit:cover;width:100%;height:100%}
+.section{padding:100px 0} .section.sage{background:var(--sage)} .section.nude{background:var(--nude)}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green);margin-bottom:18px}
+h2{font-size:clamp(36px,5vw,62px);line-height:1.02;letter-spacing:-.035em;margin:0 0 24px;font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.center{text-align:center;max-width:820px;margin:auto}
+.body-lg{font-size:20px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:45px}
+.card{padding:32px;border:1px solid var(--line);background:var(--white);min-height:220px}
+.card h3{font-size:20px;margin:0 0 12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:45px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:34px 18px;text-align:center;border-right:1px solid var(--line)} .stat:last-child{border-right:0}
+.stat strong{display:block;font-size:44px;line-height:1;margin-bottom:8px}
+.timeline{display:grid;grid-template-columns:140px 1fr;gap:0;border-top:1px solid var(--line);margin-top:45px}
+.time{padding:25px 0;border-bottom:1px solid var(--line);font-weight:700;color:var(--green)}
+.event{padding:25px 0;border-bottom:1px solid var(--line)}
+.team-photo{border-radius:12px;overflow:hidden;background:#d9d1c4}
+.team-photo img{display:block;width:100%;height:620px;object-fit:cover}
+.channel-showcase{display:grid;grid-template-columns:330px 1fr;gap:64px;margin-top:52px;align-items:start}.channel-card{min-height:445px;padding:42px 30px 32px;border:1px solid var(--line);border-radius:22px;background:var(--white);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.channel-mark{width:126px;height:126px;border-radius:50%;background:var(--nude);display:grid;place-items:center;margin-bottom:24px;color:var(--green)}.channel-mark svg{width:68px;height:68px}.channel-card h3{font-size:25px;line-height:1.15;margin:0 0 6px}.channel-label{font-size:13px;color:#9b7843;margin:0 0 24px}.channel-card p{font-size:14px;margin:0 0 26px}.channel-card .btn{width:100%;background:#b95537}.video-list{display:grid}.video-item{display:grid;grid-template-columns:190px 1fr;gap:22px;align-items:center;padding:0 0 20px;margin-bottom:20px;border-bottom:1px solid var(--line)}.video-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:linear-gradient(135deg,#aab69b,#e4d7c3);display:grid;place-items:center;color:var(--green);object-fit:cover;width:100%}.video-thumb::before{content:"";position:absolute;inset:9px;border:1px dashed rgba(49,70,56,.42);border-radius:7px}.video-thumb span{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:700}.play{position:absolute;width:42px;height:42px;border-radius:50%;background:rgba(255,253,248,.9);display:grid;place-items:center;box-shadow:0 5px 16px #26352c22}.play::after{content:"";margin-left:3px;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:9px solid var(--green)}.video-copy h3{font-size:17px;line-height:1.35;margin:0 0 7px;font-weight:600}.video-copy p{font-size:12px;color:#9b7843;margin:0}.channel-link{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:12px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;padding:2px 0 12px;border-bottom:1px solid #a98241}
+.channel-mark{width:130px;height:auto;max-width:100%;border-radius:0;background:transparent;overflow:visible}.channel-mark img{width:100%;height:auto;object-fit:contain;display:block}
+.video-thumb.has-image::before{display:none}.video-thumb img{width:100%;height:100%;object-fit:cover;display:block}.video-thumb.has-image .play{inset:50% auto auto 50%;transform:translate(-50%,-50%)}
+.price{background:var(--green);color:white;border-radius:18px;padding:55px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.price h2{margin-bottom:8px} .price .old{opacity:.7;text-decoration:line-through;font-size:17px} .price .now{font-size:58px;font-weight:600;line-height:1}
+.price .btn{background:white;color:var(--green)}
+.faq{border-top:1px solid var(--line);margin-top:35px} details{border-bottom:1px solid var(--line);padding:22px 0} summary{cursor:pointer;font-weight:700}
+.final{padding:120px 0;text-align:center;background:var(--nude)}
+.footer{padding:28px 0;text-align:center;font-size:12px;opacity:.7}
+@media(max-width:800px){
+.hero{grid-template-columns:1fr;min-height:0} .hero-copy{padding:65px 28px} .hero-photo{height:500px;min-height:0}
+.two,.cards,.stats,.price,.channel-showcase{grid-template-columns:1fr} .stats{grid-template-columns:1fr 1fr} .stat:nth-child(2){border-right:0} .stat:nth-child(3){grid-column:1 / -1;width:50%;justify-self:center;border-right:0}
+.team-photo img{height:440px} .channel-showcase{gap:30px}.channel-card{min-height:0}.video-item{grid-template-columns:145px 1fr;gap:16px}
+.price{padding:35px} .price .now{font-size:48px} .timeline{grid-template-columns:85px 1fr}
+}
+@media(max-width:520px){.video-item{grid-template-columns:1fr}.video-thumb{width:100%}.section{padding:72px 0}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="kicker">Herbo & Flor es Ser · Mes del Terapeuta Floral</div>
+    <h1>Laboratorio<br><span class="italic">de Orquídeas</span></h1>
+    <p class="body-lg">No venimos a hablar de Orquídeas.<br><strong>Venimos a experimentarlas.</strong></p>
+    <p class="lead">Una experiencia vivencial de un día completo para recorrer el sistema floral de Orquídeas de Amérika y reconectar con tu propio propósito a través del cuerpo.</p>
+    <div class="meta">SÁBADO 26 DE SEPTIEMBRE · HERBÁTICA · VILLA URQUIZA</div>
+    <a class="btn" href="#reserva">Quiero vivir la experiencia</a>
+  </div>
+  <div class="hero-photo">
+    <img src="./img/home.png" alt="">
+  </div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <div class="two">
+    <div>
+      <div class="eyebrow">El laboratorio vuelve a abrir sus puertas</div>
+      <h2>Hay cosas que no se aprenden solamente estudiándolas.</h2>
+    </div>
+    <div>
+      <p class="body-lg">Se conocen cuando las atravesamos.</p>
+      <p>En 2022 hicimos por primera vez este Laboratorio Floral de Orquídeas. Desde entonces seguimos investigando, profundizando y trabajando con este sistema.</p>
+      <p>Ahora volvemos a abrir las puertas del laboratorio para vivir las Orquídeas desde otro lugar: no solo desde la mente, sino desde el cuerpo, la experiencia y la propia percepción.</p>
+      <a class="btn" href="#propuesta">Conocer la propuesta</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section sage" id="propuesta">
+<div class="wrap center">
+  <div class="eyebrow">La propuesta</div>
+  <h2>Un laboratorio para recorrer con el cuerpo el sistema floral de Orquídeas de Amérika.</h2>
+  <p class="body-lg">Ceremonia de Cacao · meditación guiada · movimiento · escritura · creatividad · experiencias simbólicas</p>
+  <p>Un día para salir un poquito de la teoría, de la consulta, de la cabeza… y volver a encontrarnos con aquello que nos mueve.</p>
+  <a class="btn" href="#reserva">Quiero vivir la experiencia</a>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <div class="center">
+    <div class="eyebrow">¿Es para vos?</div>
+    <h2>Si las flores forman parte de tu camino, este laboratorio también.</h2>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>Terapeutas florales</h3><p>De cualquier sistema. Una experiencia para profundizar, ampliar la mirada y experimentar antes de llevar lo vivido a tu práctica.</p></div>
+    <div class="card"><h3>Personas que toman flores</h3><p>Si ya tenés vínculo con las esencias y querés conocerlas desde una experiencia más corporal y vivencial.</p></div>
+    <div class="card"><h3>Curiosas</h3><p>Si te interesa el mundo floral y querés vivir una experiencia de un día alrededor de las Orquídeas de Amérika.</p></div>
+  </div>
+  <div style="text-align:center;margin-top:42px"><a class="btn" href="#reserva">Reservar mi lugar</a></div>
+</div>
+</section>
+
+<section class="section nude">
+<div class="wrap">
+  <div class="center">
+    <div class="eyebrow">No es la primera vez</div>
+    <h2>Cuatro años de investigación detrás de esta experiencia.</h2>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong>+200</strong>terapeutas</div>
+    <div class="stat"><strong>+500</strong>consultantes</div>
+    <div class="stat"><strong>4</strong>años de investigación</div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="recorrido">
+<div class="wrap">
+  <div class="two">
+    <div>
+      <div class="eyebrow">El recorrido</div>
+      <h2>Un día para experimentar, crear y atravesar.</h2>
+      <p>La propuesta combina distintos lenguajes para que cada experiencia te acerque al sistema floral desde un lugar diferente.</p>
+    </div>
+    <div class="timeline">
+      <div class="time">10:00–13:30</div><div class="event"><strong>Mañana</strong><br>Ceremonia de cacao · viaje de tambor · siembra simbólica · ilustración de Orquídeas</div>
+      <div class="time">15:00–19:00</div><div class="event"><strong>Tarde</strong><br>Oráculo de Ángeles · meditación guiada · preguntas poderosas · escritura consciente · bruma áurica personalizada · cierre</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:48px"><a class="btn" href="#reserva">Quiero vivir el recorrido</a></div>
+</div>
+</section>
+
+<section class="section sage">
+<div class="wrap">
+  <div class="two">
+    <div class="team-photo"><img src="./img/equipo.jpg" alt="Nati, Euge y Jacqui"></div>
+    <div>
+      <div class="eyebrow">Herbo & Flor es Ser</div>
+      <h2>Quiénes somos</h2>
+      <p>Herbo y Jacqui, de Flor es Ser, se unen para volver a abrir este laboratorio cuatro años después de su primera edición.</p>
+      <p>Una experiencia creada desde la investigación, la práctica y la convicción de que algunos conocimientos se vuelven realmente nuestros cuando los experimentamos.</p>
+      <a class="btn" href="#reserva">Quiero ser parte</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <div class="center">
+    <div class="eyebrow">Nuestro canal</div>
+    <h2>Laboratorio Floral, el podcast</h2>
+  </div>
+  <div class="channel-showcase">
+    <article class="channel-card">
+      <div class="channel-mark">
+        <img src="./img/labFloral.png" alt="Laboratorio Floral, videopodcast">
+      </div>
+      <h3>Laboratorio Floral</h3><div class="channel-label">Videopodcast</div>
+      <p>Junto a Flor es Ser, nos sentamos con los pioneros, creadores e investigadores de la terapia floral para conversar sobre el
+sistemas florales del mundo.</p>
+      <a class="btn" href="https://www.youtube.com/playlist?list=PLUk0W_BehDK8Qfe_353RqOcF5gXpE7tr4">Reproducir el más reciente</a>
+    </article>
+    <div class="video-list">
+      <article class="video-item">
+        <!-- Reemplazá # poz3r la URL del primer video. -->
+        <a class="video-thumb has-image" href="https://youtu.be/AL5TyfKzV8M?si=Jw_zRUtZa46PWLFM" target="_blank" rel="noopener noreferrer" aria-label="Abrir el primer video en una pestaña nueva">
+          <img src="./img/cap00.png" alt="Miniatura del video">
+          <i class="play" aria-hidden="true"></i>
+        </a>
+        <div class="video-copy"><h3>¿Quiénes son estas locas que hablan de flores? — Herbo & Flor es Ser
+</h3><p>Laboratorio Floral · 2,3 mil reproducciones · hace 3 m.</p></div>
+      </article>
+      <article class="video-item">
+        <!-- Reemplazá # por la URL del segundo video. -->
+        <a class="video-thumb has-image" href="https://youtu.be/NLYcLgoI79M?si=QdALHl7WR-4vY4Ud" target="_blank" rel="noopener noreferrer" aria-label="Abrir el segundo video en una pestaña nueva">
+          <img src="./img/cap01.png" alt="Miniatura del video">
+          <i class="play" aria-hidden="true"></i>
+        </a>        
+        <div class="video-copy"><h3>Claudia Stern: el origen de la terapia floral en Argentina y los desafíos de hoy</h3><p>Laboratorio Floral · 5,2 mil reproducciones · hace 3 m.</p></div>
+      </article>
+      <article class="video-item">
+        <!-- Reemplazá # por la URL del tercer video. -->
+         <a class="video-thumb has-image" href="https://youtu.be/4yzoKDXWSKs?si=kYD6oyR8M_tljH1v" target="_blank" rel="noopener noreferrer" aria-label="Abrir el tercer video en una pestaña nueva">
+          <img src="./img/cap02.png" alt="Miniatura del video">
+          <i class="play" aria-hidden="true"></i>
+        </a>        
+        <div class="video-copy"><h3>Flores & Animales: tu animal te está diciendo algo. ¿Lo estás escuchando?</h3><p>Laboratorio Floral · 13 mil reproducciones · hace 3 sem.</p></div>
+      </article>
+      <a class="channel-link" href="https://www.youtube.com/playlist?list=PLUk0W_BehDK8Qfe_353RqOcF5gXpE7tr4">Ver el canal completo <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section nude">
+<div class="wrap">
+  <div class="price" id="reserva">
+    <div>
+      <div class="eyebrow" style="color:#dfe7d5">Reservá tu lugar</div>
+      <h2 style="color:white">20 lugares. Un día completo para experimentar.</h2>
+      <div class="old">$110.000</div>
+      <div class="now">$95.000</div>
+      <p>Early Bird por tiempo limitado · Aprovechá las 3 cuotas sin interés </p>
+      <p style="font-size:13px;opacity:.8">Devolución hasta 48 hs antes · entrada transferible.</p>
+    </div>
+    <a class="btn" href="https://mpago.li/2y1Wm9J">Reservar mi lugar</a>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <div class="center">
+    <div class="eyebrow">Sumás más que un lugar en la lista</div>
+    <h2>Tu reserva también incluye una invitación.</h2>
+    <p class="body-lg">Al reservar recibís un cupón de descuento para invitar a una amiga y una sorpresa para el día del evento.</p>
+    <a class="btn" href="#reserva">Quiero mi lugar</a>
+  </div>
+</div>
+</section>
+
+<section class="section sage">
+<div class="wrap">
+  <div class="center"><div class="eyebrow">Preguntas frecuentes</div><h2>Antes de reservar</h2></div>
+  <div class="faq">
+    <details><summary>¿Necesito ser terapeuta floral?</summary><p>No. La experiencia está especialmente pensada para terapeutas, pero también pueden participar personas que toman flores o que simplemente tienen interés en vivir el sistema floral desde otro lugar.</p></details>
+    <details><summary>¿Necesito conocer previamente el sistema de Orquídeas?</summary><p>No. No hace falta tener conocimientos previos.</p></details>
+    <details><summary>¿Cuánto dura?</summary><p>Es una experiencia de día completo: acreditación de 9:30 a 10:00, actividad de 10:00 a 13:30, pausa y regreso de 15:00 a 19:00.</p></details>
+    <details><summary>¿Puedo transferir mi entrada?</summary><p>Sí. La entrada es transferible. La devolución se realiza hasta 48 horas antes del evento.</p></details>
+    <details><summary>¿Cuántas personas participan?</summary><p>Solo 20 lugares, para cuidar el carácter íntimo y vivencial del laboratorio.</p></details>
+  </div>
+</div>
+</section>
+
+<section class="final">
+<div class="wrap">
+  <div class="eyebrow">Laboratorio de Orquídeas · 26 de septiembre</div>
+  <h2>Hay cosas que podemos aprender.<br><span class="italic">Y hay cosas que necesitamos experimentar.</span></h2>
+  <p>Herbática · La Pampa 4927 · Villa Urquiza</p>
+  <a class="btn" href="#reserva">Quiero vivir la experiencia</a>
+</div>
+</section>
+
+<div class="footer">Herbo & Flor es Ser · Laboratorio Floral de Orquídeas de América </div>
+</body></html>
