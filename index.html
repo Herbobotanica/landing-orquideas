@@ -41,7 +41,7 @@ h2{font-size:clamp(36px,5vw,62px);line-height:1.02;letter-spacing:-.035em;margin
 .channel-showcase{display:grid;grid-template-columns:330px 1fr;gap:64px;margin-top:52px;align-items:start}.channel-card{min-height:445px;padding:42px 30px 32px;border:1px solid var(--line);border-radius:22px;background:var(--white);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.channel-mark{width:126px;height:126px;border-radius:50%;background:var(--nude);display:grid;place-items:center;margin-bottom:24px;color:var(--green)}.channel-mark svg{width:68px;height:68px}.channel-card h3{font-size:25px;line-height:1.15;margin:0 0 6px}.channel-label{font-size:13px;color:#9b7843;margin:0 0 24px}.channel-card p{font-size:14px;margin:0 0 26px}.channel-card .btn{width:100%;background:#b95537}.video-list{display:grid}.video-item{display:grid;grid-template-columns:190px 1fr;gap:22px;align-items:center;padding:0 0 20px;margin-bottom:20px;border-bottom:1px solid var(--line)}.video-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:linear-gradient(135deg,#aab69b,#e4d7c3);display:grid;place-items:center;color:var(--green);object-fit:cover;width:100%}.video-thumb::before{content:"";position:absolute;inset:9px;border:1px dashed rgba(49,70,56,.42);border-radius:7px}.video-thumb span{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:700}.play{position:absolute;width:42px;height:42px;border-radius:50%;background:rgba(255,253,248,.9);display:grid;place-items:center;box-shadow:0 5px 16px #26352c22}.play::after{content:"";margin-left:3px;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:9px solid var(--green)}.video-copy h3{font-size:17px;line-height:1.35;margin:0 0 7px;font-weight:600}.video-copy p{font-size:12px;color:#9b7843;margin:0}.channel-link{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:12px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;padding:2px 0 12px;border-bottom:1px solid #a98241}
 .channel-mark{width:130px;height:auto;max-width:100%;border-radius:0;background:transparent;overflow:visible}.channel-mark img{width:100%;height:auto;object-fit:contain;display:block}
 .video-thumb.has-image::before{display:none}.video-thumb img{width:100%;height:100%;object-fit:cover;display:block}.video-thumb.has-image .play{inset:50% auto auto 50%;transform:translate(-50%,-50%)}
-.price{background:var(--green);color:white;border-radius:18px;padding:55px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.price{background:var(--green);color:white;border-radius:18px;padding:55px;display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,420px);gap:40px;align-items:center}.reservation-form{display:flex;flex-direction:column;gap:20px}.reservation-form .btn{align-self:center}
 .price h2{margin-bottom:8px} .price .old{opacity:.7;text-decoration:line-through;font-size:17px} .price .now{font-size:58px;font-weight:600;line-height:1}
 .price .btn{background:white;color:var(--green)}
 .faq{border-top:1px solid var(--line);margin-top:35px} details{border-bottom:1px solid var(--line);padding:22px 0} summary{cursor:pointer;font-weight:700}
@@ -219,7 +219,15 @@ sistemas florales del mundo.</p>
       <p>Early Bird por tiempo limitado · Aprovechá las 3 cuotas sin interés </p>
       <p style="font-size:13px;opacity:.8">Devolución hasta 48 hs antes · entrada transferible.</p>
     </div>
-    <a class="btn" href="https://mpago.li/2y1Wm9J">Reservar mi lugar</a>
+    <div class="reservation-form">
+      <!-- Optin - Inicio -->
+      <div id="optin-4QmOu3EW" data-type="inline"></div>
+      <link rel="stylesheet" type="text/css" href="https://optin.myperfit.com/res/css/herbobotanica/4QmOu3EW.css">
+      <script type="text/javascript" src="https://optin.myperfit.com/res/js/herbobotanica/4QmOu3EW.js" charset="UTF-8"></script>
+      <!-- Optin - Fin -->
+      <p>Falta un paso más: sacá tu entrada y asegurá tu lugar.</p>
+      <a class="btn" href="https://mpago.li/2y1Wm9J">Comprar mi entrada</a>
+    </div>
   </div>
 </div>
 </section>
